@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-	<title>Home</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
+ <div class="login">
+	<h1>Delhi's AQI Index</h1>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask 
-		</div>
-		<h2>Air Quality Index Prediction for Delhi </h2>
-		
-	</div>
-	</header>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="interview_score1" placeholder="SLP" required="required" /><br>
+      <input type="text" name="interview_score2" placeholder="VV" required="required" /><br>
+      <input type="text" name="interview_score3" placeholder="Tm" required="required" /><br>
 
-	<div class="ml-container">
+    	<input type="text" name="experience" placeholder="TM" required="required" /><br>
+        <input type="text" name="test_score" placeholder="VM" required="required" /><br>
+		 <input type="text" name="interview_score4" placeholder="H" required="required" /><br>
+        <input type="text" name="interview_score5" placeholder="T" required="required" /><br>
+        <input type="text" name="interview_score6" placeholder="V" required="required" /><br>
 
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Click the Predict Button</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
+       
 
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form>
-		
-	</div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
 
-	
-	
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
 
 </body>
 </html>
