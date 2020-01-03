@@ -14,3 +14,5 @@ To run the model locally please follow below steps:
 3.open cmd and run the app.py
 
 ![alt text](https://github.com/santhoshBjeeffy/AQI-dehi-Project/blob/master/aqi_beginning.PNG)
+
+![alt text](https://github.com/santhoshBjeeffy/AQI-dehi-Project/blob/master/aqi_prediction.PNG)
