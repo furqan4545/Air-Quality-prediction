@@ -1,0 +1,46 @@
+For isolating different version of pythons in ubuntu:
+
+https://realpython.com/intro-to-pyenv/
+https://github.com/pyenv/pyenv-installer   (this one is more accurate then 1st link)
+
+follow these blogs to install pyenv.... 
+for instance you can run this command to install pyenv
+
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+after this command run these commands 
+
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git
+
+once u install u will get an error. pyenv not install like that
+blc the pyenv is not recognized blc it is not added in the ubuntu user path yet. so for that go back to 
+home in terminal. 
+find .bashrc file there..... open the file
+add these 3 lines 
+
+PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+once these 3 lines are added you can install python 3.7 by simply saying 
+pyenv install 3.7.1
+
+once installed, you can check which python version you are currently using by saying
+pyenv versions
+
+for choosing any specific python version you can use global keyword such as:
+pyenv global 3.7.1
+
+and now u can make environment and can install requirements.txt file packages.
+For making python virtual environment u can use this command
+
+python -m venv <ENVIRONEMNT_NAME HERE>
+
+and then for activating the environment run this line.
+source <ENVIRONEMENT_NAME>/bin/activate
+
+after that you can run your desired application by saying python app.py
+
+
+
