@@ -2,11 +2,13 @@
 
 The above Repo is a deployment of predicting Air quality index for delhi that built earlier. 
 
-Original sources:
+<h3>Original sources:</h3>
+
 AQI Model : https://github.com/santhoshBjeeffy/AQI-dehi-Project
 AQI Web App: https://github.com/santhoshBjeeffy/AQI-Delhi-Deployment
 
 <h3>Disclaimer:</h3> I'm only using this for teaching purposes. For rest of the details you can reach me here:
+
 https://www.linkedin.com/in/furqanali95/
 
 To run the model locally please follow below steps:
