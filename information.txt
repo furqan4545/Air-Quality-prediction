@@ -42,5 +42,33 @@ source <ENVIRONEMENT_NAME>/bin/activate
 
 after that you can run your desired application by saying python app.py
 
+##########################################################################################################################
+###########################################################################################################################
+
+INFORMATION REGARDING DEPLOYMENT
+
+step 1: Go to azure portal 
+click create resource and select web app
+
+step 2: fill out the form you see on your screen. for e.g. selecting resource group providing web app name and all etc..
+choose os linux
+
+step 3: after deployment go to deployment center. here choose github. local git mean all the files are present in your local 
+system and from there you want to deploy it on azure. 
+
+click continue and select app service and continue. 
+
+step 4: select organization which is your github username and select repository which is ur current github repo. 
+then select master branch. after this continue and finish. 
+
+
+step 5: In the deployment center u can see the logs as well. In the log u will see Deployment successful which means that your webapp 
+is deployed successfully. 
+
+# when ur web app is runing u can click log stream in azure to see everything in cmd prompt live. 
+step 6: In azure app service click ur created web app and click overview there u will find the deployed web app link.  
+
+
+
 
 
